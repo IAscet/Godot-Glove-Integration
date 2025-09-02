@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var sprite: AnimatedSprite2D = $sprite
 @onready var distance_label: Label = $"../DistanceLabel" 
-@onready var glove_reader: Node2D = $"../GloveReader"
+@onready var glove_node: Node = $"../Glove"
 
 var gravity = 1100
 var jump_strength = -600
@@ -28,7 +28,7 @@ func _physics_process(delta: float) -> void:
 
 	if is_on_floor():
 		sprite.animation = "run"
-		if glove_reader != null and glove_reader.IsAboveBaselineState:
+		if glove_node != null and glove_node.IsFist:
 			velocity.y = jump_strength
 			sprite.animation = "jump"
 			is_jumping = true

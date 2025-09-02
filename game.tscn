@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://3b2p185ap8xx" path="res://Player.tscn" id="2_e2o6t"]
 [ext_resource type="Script" uid="uid://ca3rhc3d4u6ec" path="res://spawner.gd" id="3_feb5d"]
 [ext_resource type="PackedScene" uid="uid://cvis41kay2fp6" path="res://saw.tscn" id="4_fc0e3"]
-[ext_resource type="Script" uid="uid://bamjqqniuhndf" path="res://GloveReader.cs" id="5_7jktm"]
+[ext_resource type="Script" uid="uid://diw5chrp0c84s" path="res://addons/cynteractglove/glove.cs" id="5_7jktm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e2o6t"]
 texture = ExtResource("1_80nbo")
@@ -196,5 +196,6 @@ offset_right = 53.0
 offset_bottom = 243.0
 theme_override_font_sizes/font_size = 21
 
-[node name="GloveReader" type="Node2D" parent="."]
+[node name="Glove" type="Node" parent="."]
 script = ExtResource("5_7jktm")
+metadata/_custom_type_script = "uid://diw5chrp0c84s"

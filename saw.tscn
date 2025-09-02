@@ -76,6 +76,7 @@ script = ExtResource("1_ddabk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_7c5v0")
+disabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D"]
 texture_filter = 1
