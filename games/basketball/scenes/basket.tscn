@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://jhs0chrrmxrp"]
+
+[ext_resource type="Script" uid="uid://ddpc7o3uoob66" path="res://games/basketball/scripts/basket.gd" id="1_idgsc"]
+[ext_resource type="Texture2D" uid="uid://60bijk0qokq0" path="res://games/basketball/sprites/new-basket.png" id="2_idgsc"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_idgsc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_idgsc"]
+size = Vector2(62, 29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o74ig"]
+size = Vector2(6, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i1l7w"]
+size = Vector2(16, 210)
+
+[node name="basket" type="Area2D"]
+script = ExtResource("1_idgsc")
+
+[node name="holder" type="Sprite2D" parent="."]
+position = Vector2(7, -25)
+scale = Vector2(16.275015, 209.12502)
+texture = SubResource("CanvasTexture_idgsc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-55, 73.5)
+shape = SubResource("RectangleShape2D_idgsc")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(-52, 59.25)
+texture = ExtResource("2_idgsc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-7, 32.5)
+shape = SubResource("RectangleShape2D_o74ig")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-100, 30.5)
+shape = SubResource("RectangleShape2D_o74ig")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(7, -25)
+shape = SubResource("RectangleShape2D_i1l7w")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

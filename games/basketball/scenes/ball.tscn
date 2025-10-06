@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4134ty8xaymw"]
+
+[ext_resource type="Script" uid="uid://cx7xs3d7pswgw" path="res://games/basketball/scripts/ball.gd" id="1_ocds8"]
+[ext_resource type="Texture2D" uid="uid://bnc8638lfi8ti" path="res://games/basketball/sprites/basketball.png" id="2_cxlvu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cxlvu"]
+radius = 26.0
+
+[node name="ball" type="RigidBody2D" groups=["ball"]]
+can_sleep = false
+script = ExtResource("1_ocds8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_cxlvu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_cxlvu")

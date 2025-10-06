@@ -13,6 +13,8 @@ public partial class glove : Node
 
 	[Export]
 	public bool IsFist { get; private set; } = false;
+	public bool openCalibrated { get; private set; } = false;
+
 
 	private List<List<IMUValue>> idleFrames = new List<List<IMUValue>>();
 	private List<List<IMUValue>> fistFrames = new List<List<IMUValue>>();
@@ -28,6 +30,7 @@ public partial class glove : Node
 	{
 		GD.Print("Hold idle for 5 seconds...");
 		idleFrames = await CollectFramesAsync(5);
+		openCalibrated = true;
 
 		GD.Print("Now make a fist for 5 seconds...");
 		fistFrames = await CollectFramesAsync(5);

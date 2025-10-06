@@ -1,0 +1,209 @@
+[gd_scene load_steps=9 format=3 uid="uid://r42u3uc5wrja"]
+
+[ext_resource type="Texture2D" uid="uid://fd0wtbh6431l" path="res://games/run_and_jump/Terrain (16x16).png" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://3b2p185ap8xx" path="res://games/run_and_jump/Player.tscn" id="2_e2o6t"]
+[ext_resource type="Script" uid="uid://ca3rhc3d4u6ec" path="res://games/run_and_jump/spawner.gd" id="3_feb5d"]
+[ext_resource type="PackedScene" uid="uid://cvis41kay2fp6" path="res://games/run_and_jump/saw.tscn" id="4_fc0e3"]
+[ext_resource type="Script" uid="uid://diw5chrp0c84s" path="res://addons/cynteractglove/glove.cs" id="5_7jktm"]
+[ext_resource type="PackedScene" uid="uid://kcntivjyei4b" path="res://addons/cynteractglove/CalibrationTab.tscn" id="6_d5nco"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e2o6t"]
+texture = ExtResource("1_80nbo")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+17:1/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+17:2/0 = 0
+18:2/0 = 0
+19:2/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+19:4/0 = 0
+20:4/0 = 0
+21:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+17:5/0 = 0
+18:5/0 = 0
+19:5/0 = 0
+20:5/0 = 0
+21:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+19:6/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+6:8/0 = 0
+6:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:8/0 = 0
+7:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:8/0 = 0
+8:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:8/0 = 0
+9:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:8/0 = 0
+10:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+17:8/0 = 0
+18:8/0 = 0
+19:8/0 = 0
+20:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+6:9/0 = 0
+6:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:9/0 = 0
+7:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:9/0 = 0
+8:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:9/0 = 0
+9:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:9/0 = 0
+10:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+17:9/0 = 0
+18:9/0 = 0
+19:9/0 = 0
+20:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+6:10/0 = 0
+6:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:10/0 = 0
+7:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:10/0 = 0
+8:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:10/0 = 0
+14:10/0 = 0
+15:10/0 = 0
+18:10/0 = 0
+19:10/0 = 0
+20:10/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_feb5d"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_e2o6t")
+
+[node name="Game" type="Node2D"]
+
+[node name="Spawner" type="Node2D" parent="."]
+position = Vector2(1154, 589)
+script = ExtResource("3_feb5d")
+saw_scene = ExtResource("4_fc0e3")
+
+[node name="TileMap" type="TileMap" parent="."]
+texture_filter = 1
+position = Vector2(0, 100)
+scale = Vector2(3, 3)
+tile_set = SubResource("TileSet_feb5d")
+format = 2
+layer_0/tile_data = PackedInt32Array(655360, 458752, 8, 655361, 458752, 8, 655362, 458752, 8, 655363, 458752, 8, 655364, 458752, 8, 655365, 458752, 8, 655366, 458752, 8, 655367, 458752, 8, 655368, 458752, 8, 655369, 458752, 8, 655370, 458752, 8, 655371, 458752, 8, 655372, 458752, 8, 655373, 458752, 8, 655374, 458752, 8, 655375, 458752, 8, 655376, 458752, 8, 655377, 458752, 8, 655378, 458752, 8, 655379, 458752, 8, 655380, 458752, 8, 655381, 458752, 8, 655382, 458752, 8, 655383, 458752, 8, 720896, 458752, 9, 786432, 458752, 9, 786455, 458752, 9, 720919, 458752, 9, 720917, 458752, 9, 720916, 458752, 9, 720915, 458752, 9, 720914, 458752, 9, 720913, 458752, 9, 720912, 458752, 9, 720911, 458752, 9, 720910, 458752, 9, 720909, 458752, 9, 720908, 458752, 9, 720907, 458752, 9, 720906, 458752, 9, 720905, 458752, 9, 720904, 458752, 9, 720903, 458752, 9, 720902, 458752, 9, 720901, 458752, 9, 720900, 458752, 9, 720899, 458752, 9, 720898, 458752, 9, 720897, 458752, 9, 786434, 458752, 9, 786435, 458752, 9, 786436, 458752, 9, 786437, 458752, 9, 786438, 458752, 9, 786439, 458752, 9, 786440, 458752, 9, 786441, 458752, 9, 786442, 458752, 9, 786443, 458752, 9, 786444, 458752, 9, 786445, 458752, 9, 786446, 458752, 9, 786447, 458752, 9, 786448, 458752, 9, 786449, 458752, 9, 786450, 458752, 9, 786451, 458752, 9, 786452, 458752, 9, 786453, 458752, 9, 786454, 458752, 9, 851988, 458752, 9, 851989, 458752, 9, 851990, 458752, 9, 851991, 458752, 9, 720918, 458752, 9, 786433, 458752, 9, 851987, 458752, 9, 851986, 458752, 9, 851985, 458752, 9, 851984, 458752, 9, 851983, 458752, 9, 851982, 458752, 9, 851981, 458752, 9, 851980, 458752, 9, 851976, 458752, 9, 851975, 458752, 9, 851979, 458752, 9, 851978, 458752, 9, 851977, 458752, 9, 851974, 458752, 9, 851973, 458752, 9, 851972, 458752, 9, 851971, 458752, 9, 851970, 458752, 9, 851969, 458752, 9, 851968, 458752, 9)
+
+[node name="Player" parent="." instance=ExtResource("2_e2o6t")]
+position = Vector2(327, 541)
+scale = Vector2(3, 3)
+
+[node name="DistanceLabel" type="Label" parent="."]
+offset_left = 13.0
+offset_top = 166.0
+offset_right = 53.0
+offset_bottom = 243.0
+theme_override_font_sizes/font_size = 21
+
+[node name="Glove" type="Node" parent="."]
+script = ExtResource("5_7jktm")
+metadata/_custom_type_script = "uid://diw5chrp0c84s"
+
+[node name="CalibrationTab" parent="." instance=ExtResource("6_d5nco")]
+offset_left = 568.0
+offset_top = 325.0
+offset_right = 568.0
+offset_bottom = 325.0
+scale = Vector2(1.04, 1)
