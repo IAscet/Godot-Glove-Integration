@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://cv2ka0dne0qx2"]
+
+[ext_resource type="Script" uid="uid://tfhj8jc4cpoy" path="res://games/cube cross/scripts/player.gd" id="1_d3fbp"]
+[ext_resource type="Texture2D" uid="uid://cjd3efpirarvy" path="res://games/cube cross/art/final_texture.png" id="2_svy8l"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0rrom"]
+albedo_texture = ExtResource("2_svy8l")
+
+[sub_resource type="SphereMesh" id="SphereMesh_d3fbp"]
+material = SubResource("StandardMaterial3D_0rrom")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_svy8l"]
+
+[node name="player" type="CharacterBody3D"]
+script = ExtResource("1_d3fbp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_d3fbp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0009765625)
+shape = SubResource("SphereShape3D_svy8l")
